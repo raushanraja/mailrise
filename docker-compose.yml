@@ -1,0 +1,20 @@
+# networks:
+#   reverse_proxy:
+#     external: true
+
+services:
+
+  mailrise:
+    build: ./
+    container_name: mailrise
+    restart: unless-stopped
+    command: -vv /etc/mailrise.conf
+    volumes:
+      - ./mailrise.conf:/etc/mailrise.conf:ro
+      - ./certs/host.crt:/etc/certificate.pem
+      - ./certs/host.key:/etc/privatekey.pem
+    # networks:
+    #     - reverse_proxy
+    # ports:
+    #   - '8025:8025'
+    # - '3345:3345'

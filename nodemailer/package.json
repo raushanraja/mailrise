@@ -1,0 +1,13 @@
+{
+  "name": "nodemailer-docker",
+  "version": "1.0.0",
+  "description": "A Dockerized Node.js app to send emails using nodemailer",
+  "main": "sendEmail.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.14"
+  }
+}
